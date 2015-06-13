@@ -1,7 +1,7 @@
 class IntegerSifter
-  def self.create(buckets, repeat_after)
-    TwoByFourSifter.new
+  def self.create(pattern)
+    ABBASifter.new
   end
 end
 
-require 'integer_sifter/two_by_four_sifter'
+require 'integer_sifter/abba_sifter'
