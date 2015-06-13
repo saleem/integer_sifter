@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'integer_sifter'
+sifter = IntegerSifter.create(2,4)
+[0,1,2,3].each {|i| puts "Simple two-four sifter for #{i} returns #{sifter.sift(i)}" }
