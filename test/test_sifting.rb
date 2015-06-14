@@ -15,6 +15,12 @@ class HolaTest < Test::Unit::TestCase
     assert_pile [2, 3, 8, 9], "C", sifter
   end
 
+  def test_ABAABBAAABBB_sifter
+    sifter = IntegerSifter.create(:ABAABBAAABBB)
+    assert_pile [0, 2, 3, 6, 7, 8], "A", sifter
+    assert_pile [1, 4, 5, 9, 10, 11], "B", sifter
+  end
+
   private
   def assert_pile(array, pile, sifter)
     array.each { |e| assert_equal pile, sifter.sift(e) }

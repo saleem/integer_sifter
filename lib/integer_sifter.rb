@@ -1,8 +1,16 @@
 class IntegerSifter
   def self.create(pattern)
-    pattern == :BACCAB ? BACCABSifter.new : ABBASifter.new
+    case pattern
+    when :BACCAB
+      return BACCABSifter.new
+    when :ABAABBAAABBB
+      return ABAABBAAABBBSifter.new
+    else
+      return ABBASifter.new
+    end
   end
 end
 
 require 'integer_sifter/abba_sifter'
 require 'integer_sifter/baccab_sifter'
+require 'integer_sifter/abaabbaaabbb_sifter'
