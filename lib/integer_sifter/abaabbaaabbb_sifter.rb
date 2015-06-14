@@ -1,9 +1,5 @@
 class ABAABBAAABBBSifter
   def sift(n)
-    case n % 12
-      when 0, 2, 3, 6, 7, 8
-        return "A"
-      else return "B"
-    end
+    [0, 2, 3, 6, 7, 8].include?(n%12) ? "A" : "B"
   end
 end

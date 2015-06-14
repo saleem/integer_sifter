@@ -17,8 +17,8 @@ class HolaTest < Test::Unit::TestCase
 
   def test_ABAABBAAABBB_sifter
     sifter = IntegerSifter.create(:ABAABBAAABBB)
-    assert_pile [0, 2, 3, 6, 7, 8], "A", sifter
-    assert_pile [1, 4, 5, 9, 10, 11], "B", sifter
+    assert_pile [0, 2, 3, 6, 7, 8, 12, 14, 15, 18, 19, 20], "A", sifter
+    assert_pile [1, 4, 5, 9, 10, 11, 13, 16, 17, 21, 22, 23], "B", sifter
   end
 
   private
