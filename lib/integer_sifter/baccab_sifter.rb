@@ -1,11 +1,6 @@
 class BACCABSifter
   def sift(n)
-    case n % 6
-      when 1, 4
-        return "A"
-      when 0, 5
-        return "B"
-      else return "C"
-    end
+    norm = n%6
+    [1,4].include?(norm) ? "A" : [0, 5].include?(norm) ? "B" : "C"
   end
 end
