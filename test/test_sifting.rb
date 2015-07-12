@@ -8,6 +8,12 @@ class HolaTest < Test::Unit::TestCase
     assert_pile [1, 2, 5, 6, 9, 10, 13], "B", sifter
   end
 
+  def test_ABBA_Thilo_sifter
+    sifter = IntegerSifter.create(:ABBA_Thilo)
+    assert_pile [0, 3, 4, 7, 8, 11, 12], "A", sifter
+    assert_pile [1, 2, 5, 6, 9, 10, 13], "B", sifter
+  end
+
   def test_BACCAB_sifter
     sifter = IntegerSifter.create(:BACCAB)
     assert_pile [1, 4, 7, 10], "A", sifter
