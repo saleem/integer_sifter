@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/saleem/integer_sifter.svg?branch=master)](https://travis-ci.org/saleem/integer_sifter)
+
 # integer_sifter
 Small ruby gem to sift integers into buckets based on some arbitrary (but repeating) rule.
 
